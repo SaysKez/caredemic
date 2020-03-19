@@ -324,7 +324,7 @@ class Heading extends Component {
             {Object.keys(recs).map((value) => {
                 return (
                     <Card color="orange" href={recs[value].fields.Link} target="_blank">
-                        <Card.Content>
+                        <Card.Content className="card-content">
                             <Card.Header className="idea-header">{recs[value].fields.Title}</Card.Header>
                             <Card.Content>
                                 <p className="idea-desc">{recs[value].fields.Description}</p>

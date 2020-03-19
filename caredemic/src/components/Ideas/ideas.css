@@ -7,13 +7,23 @@
 }
 
 .idea-desc {
+    font-family: 'Nunito', 'Avenir', sans-serif !important;
     float: left;
     width: 80%;
-    color: #FF4800;
+    color: #000;
+    line-height: 1.4em;
+    font-size: 1em;
 }
 
 .idea-header {
-    color: #FF4800 !important;
+    font-family: 'Arvo', serif !important;
+    line-height: 1.4em;
+    margin-bottom: 0.75rem;
+    font-size: 1.25em !important;
+}
+
+.card-content {
+    padding: 1.75rem !important;
 }
 
 .ui.orange.card {
@@ -23,4 +33,9 @@
 }
 .ui.card, .ui.cards>.card {
     border-radius: 2.75rem !important;
+}
+
+.ui.card:hover, .ui.cards>.card:hover {
+    box-shadow: 4px 4px 4px 0px rgba(255,72,0,0.16) !important;
+    border: 2px solid #FF4800;
 }
