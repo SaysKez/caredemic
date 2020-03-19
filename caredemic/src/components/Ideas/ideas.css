@@ -36,6 +36,6 @@
 }
 
 .ui.card:hover, .ui.cards>.card:hover {
-    box-shadow: 4px 4px 4px 0px rgba(255,72,0,0.16) !important;
-    border: 2px solid #FF4800;
+    box-shadow: 0px 0px 0px 2px rgba(255,72,0,1) !important;
+    /* border: 2px solid #FF4800; */
 }

@@ -23,7 +23,7 @@ class Banner extends Component {
           </Grid.Column>
           <Grid.Column>
           <ul>
-            <li><a href="/inbox">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/login">About</a></li>
             <li><a href="/inbox">Suggest</a></li>
           </ul>
