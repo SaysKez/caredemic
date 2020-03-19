@@ -7,11 +7,11 @@ class Heading extends Component {
     return (
         <div>
             <Icon className={"heading-icon"} name="heartbeat" size="massive" />
-            <Header as="h1" textAlign="center" color="orange">What can I do?</Header>
+            <Header as="h1" textAlign="center">What can I do?</Header>
             <Header as="h4" textAlign="center">
-              COVID-19 is sweeping the globe. But we are not helpless
+              COVID-19 is sweeping the globe. But we are not helpless.
               <br />
-              The choice to spread hope or fear, is ours.
+              Fear is a virus. Be the cure.
             </Header>
         </div>
         

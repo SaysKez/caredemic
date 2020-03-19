@@ -329,10 +329,10 @@ class Heading extends Component {
                             <Card.Content>
                                 <p className="idea-desc">{recs[value].fields.Description}</p>
                                 {recs[value].fields.Type === "Share" &&
-                                    <Icon color="orange" className="idea-icon" size="huge" name="twitter" />
+                                    <Icon className="idea-icon" size="large" name="twitter" />
                                 }
                                 {recs[value].fields.Type === "Link" &&
-                                    <Icon color="orange" className="idea-icon" size="huge" name="linkify" />
+                                    <Icon className="idea-icon" size="large" name="linkify" />
                                 }
                             </Card.Content>
 

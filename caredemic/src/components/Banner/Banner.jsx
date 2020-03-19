@@ -7,7 +7,7 @@ class Banner extends Component {
       <Grid columns={3}>
         <Grid.Row>
           <Grid.Column>
-            <Header as="h1" color="orange">Caredemic</Header>
+            <Header as="h1">Caredemic</Header>
             <Header as="h4">
               "Love your neighbour as yourself"
               <br />
