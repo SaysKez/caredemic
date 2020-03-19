@@ -1,0 +1,21 @@
+.idea-icon {
+    float: right;
+    width: 20%;
+}
+
+.idea-desc {
+    float: left;
+    width: 80%;
+    color: orange;
+}
+
+.idea-header {
+    color: orange !important;
+}
+
+.ui.orange.card {
+    box-shadow: 0px 0px 10px 2px orange !important;
+}
+.ui.card, .ui.cards>.card {
+    border-radius: 2.75rem !important;
+}
