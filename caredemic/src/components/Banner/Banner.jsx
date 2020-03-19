@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Header, Button } from 'semantic-ui-react'
+import './banner.css'
 
 class Banner extends Component {
   render() {
@@ -21,15 +22,11 @@ class Banner extends Component {
           <Grid.Column>
           </Grid.Column>
           <Grid.Column>
-            <Button>
-              About
-            </Button>
-            <Button>
-              Suggest
-            </Button>
-            <Button>
-              Health Guidelines
-            </Button>
+          <ul>
+            <li><a href="/inbox">Home</a></li>
+            <li><a href="/login">About</a></li>
+            <li><a href="/inbox">Suggest</a></li>
+          </ul>
           </Grid.Column>
         </Grid.Row>
 
