@@ -4,6 +4,10 @@
     width: 4rem;
 }
 
+.heading {
+    margin-bottom: 4rem;
+}
+
 /* TYPOGRAPHY */
 h1 {
     color: #FF4800 !important;

@@ -27,9 +27,9 @@
 }
 
 .ui.orange.card {
-    -webkit-box-shadow: 8px 8px 12px 0px rgba(255,72,0,0.16);
-    -moz-box-shadow: 8px 8px 12px 0px rgba(255,72,0,0.16);
-    box-shadow: 8px 8px 12px 0px rgba(255,72,0,0.16) !important;
+    -webkit-box-shadow: 8px 8px 12px 0px rgba(255,72,0,0.2);
+    -moz-box-shadow: 8px 8px 12px 0px rgba(255,72,0,0.2);
+    box-shadow: 8px 8px 12px 0px rgba(255,72,0,0.2) !important;
 }
 .ui.card, .ui.cards>.card {
     border-radius: 2.75rem !important;

@@ -6,7 +6,7 @@ class Banner extends Component {
   render() {
     return (
       <Grid columns={3}>
-        <Grid.Row>
+        <Grid.Row className="top">
           <Grid.Column>
             <Header as="h1">Caredemic</Header>
             <Header as="h4">

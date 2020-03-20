@@ -16,12 +16,18 @@ ul li a {
     transition: all 0.15s ease-in;
 }
 
+ul li a:visited {
+    color: #FF4800;
+}
+
 ul li a:hover, a:focus {
     color: #fff;
     border-radius: 2.75rem;
     background-color: #FF4800;
 }
 
-ul li a:visited {
-    color: #FF4800;
+
+/* Hacky CSS because I couldn't get margin in any other way... */
+.top {
+    margin-top: 2rem;
 }
