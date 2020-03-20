@@ -1,1 +1,9 @@
+.footer-container {
+    text-align: center;
+    padding-top: 5em;
+}
 
+.footer-logo {
+    height: 3em;
+    width: 3em;
+}
