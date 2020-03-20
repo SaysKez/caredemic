@@ -11,7 +11,6 @@ function App() {
       <Container>
         <Banner />
         <Heading />
-        <Divider />
         <Ideas />
       </Container>
     </div>
