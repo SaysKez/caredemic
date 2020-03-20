@@ -22,8 +22,22 @@
     font-size: 1.25em !important;
 }
 
+.filter-header {
+    font-family: 'Arvo', serif !important;
+    line-height: 1.4em;
+    margin-bottom: 0.75rem;
+    font-size: 1.25em !important;
+}
+
 .card-content {
     padding: 1.75rem !important;
+}
+
+.filter-bar {
+    padding-bottom: 2em;
+}
+
+button.ui.button.filter-button {
 }
 
 .ui.orange.card {
