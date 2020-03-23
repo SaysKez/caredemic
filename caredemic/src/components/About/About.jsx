@@ -13,7 +13,7 @@ class About extends Component {
             <section className="about">
                 <p><b>SPOILER ALERT:</b> There does not have to be a global pandemic to wash your hands (or help others).</p>
 
-                <p>Most of the ideas here could be done any time. Start now, don't stop. Make 2020 a year when hope and love spread farther than any virus can, and last much longer.</p>
+                <p>Most of the ideas here could be done any time. Start now, don't stop. Make 2020 a year when hope and love spread farther than any virus can, and last much longer. <cite>#Caredemic</cite></p>
             </section>
             
             <Header as="h1" textAlign="center">Why Caredemic?</Header>

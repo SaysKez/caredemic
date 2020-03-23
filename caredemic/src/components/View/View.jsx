@@ -32,7 +32,7 @@ class View extends Component {
                 <Grid.Row className="top">
                 <Grid.Column>
                     <Header as="h1">Caredemic</Header>
-                    <Header as="h4">
+                    <Header as="h4" class="tagline">
                     "Love your neighbour as yourself"
                     <br />
                     "Which of these do you think was a neighbour?"

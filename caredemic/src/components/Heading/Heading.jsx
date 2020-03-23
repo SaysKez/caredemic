@@ -12,7 +12,7 @@ class Heading extends Component {
             <Header as="h4" textAlign="center">
               COVID-19 is sweeping the globe. But we are not helpless.
               <br />
-              Fear is a virus. Be the cure.
+              Fear is a virus. Spread hope.
             </Header>
         </div>
         
