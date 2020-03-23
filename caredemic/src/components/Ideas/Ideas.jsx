@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, Card, Icon, Header } from 'semantic-ui-react';
+import { Dropdown, Card, Icon, Header, Button } from 'semantic-ui-react';
 import Heading from '../Heading'
 import './ideas.css'
 class Ideas extends Component {
@@ -318,62 +318,91 @@ class Ideas extends Component {
       });
         console.log("called");
     }
-    handleChange = (e, data) => {
+    handleClick = (filter) => {
         const {rawData} = this.state;
-        if(data.value.length > 0) {
-            var filteredData = []
-            rawData.map(elements => {
-                console.log(elements.fields.Category)
-                if (data.value.includes(elements.fields.Category.toLowerCase())) {
-                    console.log("True");
-                    filteredData.push(elements);
-                } else {
-                    console.log("False")
-                }
-            })
-            console.log(filteredData);
+        if (filter === "All") {
             this.setState({
-                recs: filteredData
+                recs: rawData,
+                active: "All"
             })
         } else {
+            var filteredData = []
+            rawData.map(elements => {
+                if(elements.fields.Category === filter) {
+                    console.log("true");
+                    filteredData.push(elements);
+                }
+            });
             this.setState({
-                recs: rawData
+                recs: filteredData,
+                active: filter
             })
-        }
+        } 
     }
+    // handleChange = (e, data) => {
+    //     const {rawData} = this.state;
+    //     if(data.value.length > 0) {
+    //         var filteredData = []
+    //         rawData.map(elements => {
+    //             console.log(elements.fields.Category)
+    //             if (data.value.includes(elements.fields.Category.toLowerCase())) {
+    //                 console.log("True");
+    //                 filteredData.push(elements);
+    //             } else {
+    //                 console.log("False")
+    //             }
+    //         })
+    //         console.log(filteredData);
+    //         this.setState({
+    //             recs: filteredData
+    //         })
+    //     } else {
+    //         this.setState({
+    //             recs: rawData
+    //         })
+    //     }
+    // }
   render() {
-    const {recs} = this.state;
-    const options = [
-        { key: 'time', text: 'Time', value: 'time' },
-        { key: 'finances', text: 'Finances', value: 'finances' },
-        { key: 'Supplies', text: 'Supplies', value: 'supplies' },
-        { key: 'give me ideas', text: 'Give me ideas', value: 'give me ideas' },
-        { key: 'business', text: 'Business', value: 'business' }
-      ]
+    const {recs, active} = this.state;
+    // const options = [
+    //     { key: 'time', text: 'Time', value: 'time' },
+    //     { key: 'finances', text: 'Finances', value: 'finances' },
+    //     { key: 'Supplies', text: 'Supplies', value: 'supplies' },
+    //     { key: 'give me ideas', text: 'Give me ideas', value: 'give me ideas' },
+    //     { key: 'business', text: 'Business', value: 'business' }
+    //   ]
     return (
         <div>
             <Heading title="What can I do?" subtitle="COVID-19 is sweeping the globe. But we are not helpless."/>
-            <div className="filter-bar">
-                <Header className="filter-header" as="h4">Filter suggestions:</Header>
-                <Dropdown placeholder="Idea Type" fluid multiple options={options} onChange={this.handleChange}/>
+            <div className="button-row">
+                <Button className="filter-button" active={active === "All"} onClick={() => this.handleClick("All")}>All</Button>
+                <Button className="filter-button" active={active === "Time"} onClick={() => this.handleClick("Time")}>Time</Button>
+                <Button className="filter-button" active={active === "Finances"} onClick={() => this.handleClick("Finances")}>Finances</Button>
+                <Button className="filter-button" active={active === "Supplies"} onClick={() => this.handleClick("Supplies")}>Supplies</Button>
+                <Button className="filter-button" active={active === "Give me ideas"} onClick={() => this.handleClick("Give me ideas")}>Give me ideas</Button>
+                <Button className="filter-button" active={active === "Business"} onClick={() => this.handleClick("Business")}>Business</Button>
             </div>
             <Card.Group itemsPerRow={2}>
                 {recs && Object.keys(recs).map((value) => {
                     return (
-                        <Card color="orange" href={recs[value].fields.Link} target="_blank">
-                            <Card.Content className="card-content">
-                                <Card.Header className="idea-header">{recs[value].fields.Title}</Card.Header>
-                                <Card.Content>
-                                    <p className="idea-desc">{recs[value].fields.Description}</p>
-                                    {recs[value].fields.Type === "Share" &&
+                        <Card color="orange" target="_blank">
+                            {recs[value].fields.Type === "Share" &&
+                                <Card.Content 
+                                    href={'https://twitter.com/intent/tweet?hashtags=caredemic&text=' + recs[value].fields.Title + '&url=https://caredemic.life'}
+                                    className="card-content">
+                                        <Card.Header className="idea-header">{recs[value].fields.Title}</Card.Header>
+                                        <p className="idea-desc">{recs[value].fields.Description}</p>
                                         <Icon className="idea-icon" size="large" name="group" />
-                                    }
-                                    {recs[value].fields.Type === "Link" &&
-                                        <Icon className="idea-icon" size="large" name="linkify" />
-                                    }
                                 </Card.Content>
-
-                            </Card.Content>
+                                
+                            }
+                            {recs[value].fields.Type === "Link" &&
+                                <Card.Content href={recs[value].fields.Link} className="card-content">
+                                    <Card.Header className="idea-header">{recs[value].fields.Title}</Card.Header>
+                                    <p className="idea-desc">{recs[value].fields.Description}</p>
+                                    <Icon className="idea-icon" size="large" name="linkify" />
+                                </Card.Content>
+                            }
                         </Card>
                     )
                 })}
