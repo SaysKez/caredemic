@@ -28,21 +28,21 @@ class View extends Component {
     return (
         <Container>
             {/* Banner section, moved to allow for cleaner state changes */}
-            <Grid columns={3}>
-                <Grid.Row className="top">
+            <Grid columns='equal'>
+                <Grid.Row className="top" computer={3} mobile={2}>
                 <Grid.Column>
                     <Header as="h1">Caredemic</Header>
-                    <Header as="h4" class="tagline">
+                    <Header as="h4">
                     "Love your neighbour as yourself"
                     <br />
-                    "Which of these do you think was a neighbour?"
+                    <span class="tagline">"Which of these do you think was a neighbour?"
                     <br />
                     "The one who had mercy on him"
                     <br />
-                    "Go and do likewise"
+                    "Go and do likewise"</span>
                     </Header>
                 </Grid.Column>
-                <Grid.Column>
+                <Grid.Column only='large screen'>
                 </Grid.Column>
                 <Grid.Column>
                 <ul>
