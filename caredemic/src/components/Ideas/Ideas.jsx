@@ -389,7 +389,8 @@ class Ideas extends Component {
                             {recs[value].fields.Type === "Share" &&
                                 <Card.Content 
                                     href={'https://twitter.com/intent/tweet?hashtags=caredemic&text=' + recs[value].fields.Title + '&url=https://caredemic.life'}
-                                    className="card-content">
+                                    className="card-content"
+                                    target="_blank">
                                         <Card.Header className="idea-header">{recs[value].fields.Title}</Card.Header>
                                         <p className="idea-desc">{recs[value].fields.Description}</p>
                                         <Icon className="idea-icon" size="large" name="twitter" />
@@ -397,7 +398,7 @@ class Ideas extends Component {
                                 
                             }
                             {recs[value].fields.Type === "Link" &&
-                                <Card.Content href={recs[value].fields.Link} className="card-content">
+                                <Card.Content href={recs[value].fields.Link} className="card-content" target="_blank">
                                     <Card.Header className="idea-header">{recs[value].fields.Title}</Card.Header>
                                     <p className="idea-desc">{recs[value].fields.Description}</p>
                                     <Icon className="idea-icon" size="large" name="linkify" />
