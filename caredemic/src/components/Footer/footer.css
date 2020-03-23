@@ -1,9 +1,33 @@
 .footer-container {
     text-align: center;
-    padding-top: 5em;
+    margin: 8em auto 4em auto;
+    max-width: 900px;
+    width: 68%;
+}
+
+.footer-container p {
+    font-family: 'Nunito', sans-serif !important;
+    line-height: 1.8em;
+}
+
+p a {
+    color: #FF4800;
+}
+
+p a:visited {
+    color: #FF4800;
+}
+
+p a:focus {
+    font-weight: 700;
+}
+
+p a:hover {
+    font-weight: 700;
 }
 
 .footer-logo {
     height: 3em;
     width: 3em;
+    margin-top: 2em;
 }

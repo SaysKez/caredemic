@@ -1,0 +1,21 @@
+.about {
+    display: block;
+    margin: 4em auto 0em auto;
+    max-width: 900px;
+    width: 68%;
+}
+
+.about:first-of-type {
+    margin-bottom: 8em;
+}
+
+.about p, .about cite {
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 110%;
+    line-height: 1.8em;
+}
+
+cite {
+    font-style: initial;
+    color: #FF4800;
+}
