@@ -19,3 +19,20 @@ cite {
     font-style: initial;
     color: #FF4800;
 }
+
+
+/* SUPER BASIC RESPONSIVE */
+
+@media (max-width: 65em) {
+    .about {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 45em) {
+    .about {
+        width: 95%;
+    }
+
+}

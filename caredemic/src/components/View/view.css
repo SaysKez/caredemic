@@ -46,3 +46,11 @@ button.ui.banner-nav-about:hover{
 .top {
     margin-top: 2rem;
 }
+
+
+/* SUPER BASIC RESPONSIVE */
+@media (max-width: 45em) {
+.tagline {
+    display: none;
+}
+}
