@@ -9,22 +9,22 @@ import './view.css';
 class View extends Component {
     constructor(props) {
         super(props);
-        
+        let key = process.env.REACT_APP_API_KEY;
         this.state = {
-            region: "idea"
+            region: "idea",
+            api: key
         }
+
         this.updateRegion = this.updateRegion.bind(this);
      };
-    componentDidMount() {
-    }
-
     updateRegion(newRegion) {
         this.setState({
             region: newRegion,
         });
     }
   render() {
-    const {region} = this.state;
+    const {region, api} = this.state;
+    console.log(api)
     return (
         <Container>
             {/* Banner section, moved to allow for cleaner state changes */}
@@ -53,7 +53,7 @@ class View extends Component {
                 </Grid.Column>
                 </Grid.Row>
             </Grid>
-            {region === "idea" && <Ideas />}
+            {region === "idea" && <Ideas test="hello" api={api}/>}
             {region === "about" && <About />}
             <Footer />
         </Container>
