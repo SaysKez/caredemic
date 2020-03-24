@@ -24,7 +24,6 @@ class View extends Component {
     }
   render() {
     const {region, api} = this.state;
-    console.log(api)
     return (
         <Container>
             {/* Banner section, moved to allow for cleaner state changes */}

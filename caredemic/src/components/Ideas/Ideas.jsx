@@ -5,7 +5,6 @@ import './ideas.css'
 class Ideas extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props);
         
         this.state = {
             recs: ""
@@ -23,7 +22,6 @@ class Ideas extends Component {
         }).catch(err => {
           // Error :(
       });
-        console.log("called");
     }
     handleClick = (filter) => {
         const {rawData} = this.state;
@@ -36,7 +34,6 @@ class Ideas extends Component {
             var filteredData = []
             rawData.map(elements => {
                 if(elements.fields.Category === filter) {
-                    console.log("true");
                     filteredData.push(elements);
                 }
             });
